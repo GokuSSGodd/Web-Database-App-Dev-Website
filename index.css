@@ -1,0 +1,25 @@
+ body{
+    background: linear-gradient(90deg, #22C55E, #2563EB);
+    margin: 0;
+    overflow: hidden;
+}
+
+.navbar{
+    background: #1E293B;
+    padding: 14px;
+}
+
+.navbar a {
+    color:#E2E8F0;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px 66px; 
+    border-radius: 5px;
+}
+
+.photo {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+}
