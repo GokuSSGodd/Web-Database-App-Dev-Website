@@ -1,41 +1,70 @@
+ :root{
+    --paragraph-font-size:28px; 
+ }
+ 
  body{
     background: linear-gradient(90deg, #22C55E, #2563EB);
     margin: 0;
-    overflow: hidden;
+   
 }
 
 .navbar{
     background: #1E293B;
     padding: 14px;
+    text-align: center ;
 }
 
 .navbar a {
     color:#E2E8F0;
+    font-size: 18px;
     font-weight: bold;
     text-decoration: none;
-    padding: 10px 66px; 
+    padding: 10px 59px; 
     border-radius: 5px;
+    display: inline-block;
 }
 
-.photo {
-  display: inline-block;
-  width: 20%;
-  padding: 0 1% 0 0;
-  height: auto;
-  padding: 0 0 20px 0;
+.heading {
+    text-align: center;
+    font-size: 40px;;
 }
 
 .about-me-section {
-  display: inline;
+  margin: 50px;
+  border: #1E293B 2px solid;
+  background: rgba(255,255,255,0.12);
 }
 
-About  {
-  display: inline-block;
-  width: 49%;
-  font-size: 24px;
-  vertical-align: top;
-  margin: 0;
+.photo {
+  float: left;
+  width: 200px;
+  height: 210px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-left: 75px;
+  margin-top: 55px;
+}
+
+.about-me  {
+  font-size: var(--paragraph-font-size);  
+  margin-left: 350px;
+  margin-right: 75px;
   text-align: justify;
-  padding: 0 0 0 1%;
+}
+
+.education-section {
+  margin: 50px;
+  border: #1E293B 2px solid;
+  background: rgba(255,255,255,0.12);
+  border-radius: 25px;
+}
+
+.education  {
+  font-size: var(--paragraph-font-size);
+  text-align: center;  
+}
+
+.education p {
+  margin: 5px 0;
 }
 
