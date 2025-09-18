@@ -6,19 +6,20 @@
         <link rel="stylesheet" href="index.css">
     </head>
     <body>
-        <header>
+        <header id="Home">
             <nav class="navbar">
-            <a href="#">Home</a>
+            <a href="#Home">Home</a>
             <a href="#About">About Me</a>
-            <a href="#">Education</a>
-            <a href="#">Experience</a>
-            <a href="#">Projects</a>
+            <a href="#Education">Education</a>
+            <a href="#Experience">Experience</a>
+            <a href="#Projects">Projects</a>
             <a href="#">Certifications & Awards</a>
             <a href="#">Resume</a>
             <a href="#">Testimonials</a>
             </nav>
         </header>
         <main>
+            
             <section id="About">
             <h2 class="heading">About Me</h2>
             <div class="about-me-section">
@@ -43,66 +44,80 @@
             </div>
             </div>
             </section>
+            
+            <section id="Experience">
+            <h2 class="heading">Experience</h2>
+            <div class="experience-section">
+            <div class="experience">
+                <p class="experience-position-name">Co-Founder & Lead Engineer</p>
+                <p class="experience-company">SendIt - Startup In Development</p>
+                    <ul class="experience-tasks">
+                        <li>Engineered a lightweight, socket-based file transfer application in Java enabling direct peer-to-peer file
+                        sharing without cloud dependencies.</li>
+                        <li>Implemented a GUI using JavaFX to streamline user interaction, featuring IP, port, and password fields
+                        for secure dynamic authentication.</li>
+                        <li>Developed both sender and receiver modules with support for unlimited file sizes and robust error
+                        handling.</li>
+                        <li>Utilized TCP sockets to ensure reliable file transmission across platforms (Windows/macOS/Linux).</li>
+                        <li>Led Git version control operations including branching, merging, and resetting changes to ensure
+                        collaborative and clean development cycles.</li>
+                    </ul>
+                <p class="experience-location">Jan 2025 - Present | West Haven, Connecticut (On-Site)</p>
 
+                <p class="experience-position-name">Cybersecurity & IT Risk Intern</p>
+                <p class="experience-company">Webster Bank</p>
+                <ul class="experience-tasks">
+                    <li>Managed and reviewed evidence for 15+ security issues, ensuring 100% milestone completion and maintaining audit readiness.</li>
+                    <li>Conducted 5+ third-party Information Security Risk Assessments and peer reviews, improving vendor security compliance scores by 15%.</li>
+                    <li>Created 10+ process-specific training documents and contributed to cybersecurity awareness initiatives, reducing onboarding time by 30% and increasing employee engagement with security best practices.</li>
+                </ul>
+                <p class="experience-location">May 2025 - Aug 2025 | Southington, Connecticut (Hybrid)</p>
+            
+                <p class="experience-position-name">Information Security Officer</p>
+                <p class="experience-company">iQ4</p>
+                    <ul class="experience-tasks">
+                        <li>Analyzed real-world cybersecurity challenges, leveraging
+                            the NIST Cybersecurity Framework to develop strategic solutions for
+                            threat identification, data breach prevention, and compliance with
+                            security policies.</li>
+                        <li>Implemented and maintained robust security measures,
+                            demonstrating leadership and expertise in Governance Risk and Compliance
+                            (GRC) and Security Operations (SOC).</li>
+                <p class="experience-location">Jun 2024 - Aug 2024 | Remote, Connecticut</p>
+            </div>
+            </div>
+            </section>
+
+            <section id="Projects">
+            <h2 class="heading">Projects</h2>
+            <div class="projects-section">
+            <div class="project">
+                <p class="project-name">Classify – Full Stack Application (Hackathon Project)</p>
+                <p class="project-location">Wesleyan University | Nov 2024</p>
+                <ul class="project-description">
+                    <li>Built a smart matching algorithm using Python, Flask, and Flask-SQLAlchemy to tailor course and professor suggestions to individual user profiles</li>
+                    <li>Implemilt a smart matching algorithm using Python, Flask, and Flask-SQLAlchemy to tailor course and professor suggestions to individual user profiles.</li>
+                    <li>Designed a responsive user interface with HTML, CSS, and JavaScript, including an autocomplete search feature that improved user search efficiency by 35%.</li>
+                    <li>Automated user profile customization through a dynamic survey, increasing signup completion rates by 50%.</li>
+                    <li>Engineered a course selection tool with personalized recommendations to enhance academic planning.</li>
+                </ul>
+
+                <p class="project-name">Ethical Hacking Final – Penetration Testing & Vulnerability Exploitation Lab</p>
+                <p class="project-location">West Haven | Apr 2025</p>
+                <ul class="project-description">
+                    <li>Conducted a penetration test on 3 custom VMs (Ubuntu, Debian, Windows), exploiting 9+ CVEs (e.g., CVE-2018-10933, CVE-2017-0143, CVE-2019-0708, CVE-2016-5195, CVE-2022-0847) to demonstrate remote code execution and privilege escalation to root/SYSTEM.</li>
+                    <li>Performed reconnaissance with Nmap and Wireshark, identifying 10+ exposed services/ports that enabled successful exploitation via Metasploit Framework, Python PoCs, and kernel exploits compiled with gcc.</li>
+                    <li>Built and deployed a Docker-based libssh container to simulate real-world service exposure, achieving an unauthenticated root shell through crafted packets.</li>
+                    <li>Documented all findings using MITRE ATT&CK and NIST SP 800-53, producing a 35+ page report with executive-level summaries, technical evidence, and 8+ actionable remediation strategies.</li>
+                    <li>Managed the testing environment with VMware Workstation, using snapshots and rollback for reproducibility and safe testing.</li>
+                </ul>                 
             </div>
         </main>
     </body>
 </html>
 
 
-<!--University of New Haven
-B.S. in Computer Science
-GPA: 3.63/4.00, Dean's List
-Coursework: Intro to Artificial Intelligence, Data Structures & Algorithms, Ethical Hacking, Operating Systems, Advanced C++ -->
 
-<!--    Co-Founder & Lead Engineer
-
-    SendIt - Startup In Development
-
-        Engineered a lightweight, socket-based file transfer application in Java enabling direct peer-to-peer file
-        sharing without cloud dependencies.
-        Implemented a GUI using JavaFX to streamline user interaction, featuring IP, port, and password fields
-        for secure dynamic authentication.
-        Developed both sender and receiver modules with support for unlimited file sizes and robust error
-        handling.
-        Utilized TCP sockets to ensure reliable file transmission across platforms (Windows/macOS/Linux). 
-        Led Git version control operations including branching, merging, and resetting changes to ensure
-        collaborative and clean development cycles. 
-
-
-    Jan 2025 - Present | West Haven, Connecticut (On-Site)
-
-
-    Cybersecurity & IT Risk Intern
-
-    Webster Bank
-
-        Managed and reviewed evidence for 15+ security issues, ensuring 100% milestone completion and maintaining audit readiness.
-        Conducted
-        5+ third-party Information Security Risk Assessments and peer reviews,
-        improving vendor security compliance scores by 15%.
-        Created
-        10+ process-specific training documents and contributed to
-        cybersecurity awareness initiatives, reducing onboarding time by 30% and
-        increasing employee engagement with security best practices.
-
-
-    May 2025 - Aug 2025 | Southington, Connecticut (Hybrid)
-
-    Information Security Officer
-
-    iQ4
-
-        Analyzed real-world cybersecurity challenges, leveraging
-        the NIST Cybersecurity Framework to develop strategic solutions for
-        threat identification, data breach prevention, and compliance with
-        security policies.
-        Implemented and maintained robust security measures,
-        demonstrating leadership and expertise in Governance Risk and Compliance
-        (GRC) and Security Operations (SOC).
-
-
-    Jun 2024 - Aug 2024 | Remote, Connecticut-->
 
     <!--Classify – Full Stack Application (Hackathon Project)
 

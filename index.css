@@ -1,11 +1,11 @@
  :root{
     --paragraph-font-size:28px; 
+    --heading-font-weight: bold;
  }
  
  body{
     background: linear-gradient(90deg, #22C55E, #2563EB);
     margin: 0;
-   
 }
 
 .navbar{
@@ -17,7 +17,7 @@
 .navbar a {
     color:#E2E8F0;
     font-size: 18px;
-    font-weight: bold;
+    font-weight: var(--heading-font-weight);
     text-decoration: none;
     padding: 10px 59px; 
     border-radius: 5px;
@@ -59,12 +59,46 @@
   border-radius: 25px;
 }
 
-.education  {
-  font-size: var(--paragraph-font-size);
-  text-align: center;  
-}
-
 .education p {
+  text-align: center;
+  font-size: var(--paragraph-font-size);
   margin: 5px 0;
 }
 
+.experience-section {
+  margin: 50px;
+  border: #1E293B 2px solid;
+  background: rgba(255,255,255,0.12);
+  border-radius: 125px;
+}
+
+.experience, .project {
+  margin: 20px 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.experience p, .experience-tasks, .project-description {
+  font-size: var(--paragraph-font-size);
+}
+
+.experience-position-name, .project-name {
+  font-weight: var(--heading-font-weight);
+  font-size: 32px;
+}
+
+.experience-company, .project-location {
+  font-weight: var(--heading-font-weight);
+  font-size: 30px;
+}
+
+.experience-location {
+  font-weight: var(--heading-font-weight);
+}
+
+.projects-section {
+  margin: 50px;
+  border: #1E293B 2px solid;
+  background: rgba(255,255,255,0.12);
+  border-radius: 125px;
+}
