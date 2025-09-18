@@ -1,6 +1,9 @@
  :root{
     --paragraph-font-size:28px; 
     --heading-font-weight: bold;
+    --section-margin: 50px;
+    --section-border: #1E293B 2px solid;
+    --section-background: rgba(255,255,255,0.12);
  }
  
  body{
@@ -30,9 +33,9 @@
 }
 
 .about-me-section {
-  margin: 50px;
-  border: #1E293B 2px solid;
-  background: rgba(255,255,255,0.12);
+  margin: var(--section-margin);
+  border:var(--section-border);
+  background: var(--section-background);
 }
 
 .photo {
@@ -53,9 +56,9 @@
 }
 
 .education-section {
-  margin: 50px;
-  border: #1E293B 2px solid;
-  background: rgba(255,255,255,0.12);
+  margin: var(--section-margin);
+  border:var(--section-border);
+  background: var(--section-background);
   border-radius: 25px;
 }
 
@@ -65,10 +68,10 @@
   margin: 5px 0;
 }
 
-.experience-section {
-  margin: 50px;
-  border: #1E293B 2px solid;
-  background: rgba(255,255,255,0.12);
+.experience-section, .projects-section {
+  margin: var(--section-margin);
+  border:var(--section-border);
+  background: var(--section-background);
   border-radius: 125px;
 }
 
@@ -96,9 +99,27 @@
   font-weight: var(--heading-font-weight);
 }
 
-.projects-section {
-  margin: 50px;
-  border: #1E293B 2px solid;
-  background: rgba(255,255,255,0.12);
-  border-radius: 125px;
+.certifications-section{
+  margin: var(--section-margin);
+  border:var(--section-border);
+}
+
+.certification-photo {
+  width: 527px;
+  height: 500px;
+  object-fit:contain;
+  border:var(--section-border);
+  vertical-align: middle;
+}
+
+.certification-item{
+  display: inline-table;
+}
+
+.certification-name{
+  border:var(--section-border);
+  font-size: 20px;
+  width: 527px;
+  text-align: center;
+  vertical-align: middle;
 }
