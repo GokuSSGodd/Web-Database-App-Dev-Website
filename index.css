@@ -125,22 +125,32 @@
 }
 
 .testimonials-section {
-  margin: var(--section-margin);
-  border:var(--section-border);
-  background: var(--section-background);
+  margin: 25px;
 }
 
-.testimonial-logo {
-  width: 200px;
-  height: 210px;
-  object-fit: cover;
-  border-radius: 50%;
-  margin-left: 75px;
-  margin-top: 55px;
+.testimonial-photo {
+  float: left;
+  width: 700px;
+  height: 300px;
+  margin-top: 27px;
+  object-fit: fill;
+  margin-left: 25px;
+}
+
+.testimonial-quote {
+  font-size: var(--paragraph-font-size);  
+  margin-left: 750px;
+  margin-right: 25px;
+  text-align: justify;
 }
 
 .testimonial-item {
-  font-size: var(--paragraph-font-size);  
-  margin-left: 620px;
-  margin-right: 75px;
+  display: inline-block;
+  width: 100%;
+}
+
+.testimonial-author {
+  margin-left: 1000px;
+  font-size: var(--paragraph-font-size);
+  width: 425px;
 }
