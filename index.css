@@ -154,3 +154,21 @@
   font-size: var(--paragraph-font-size);
   width: 425px;
 }
+
+.resume-section {
+  margin: var(--section-margin);
+  text-align: center;
+}
+
+.resume-button {
+  background-color: lightgray;
+  padding: 10px;
+  font-size: 23px;
+  margin-bottom: 50px;
+  border-radius: 10px;
+}
+
+.resume-photo {
+  width: 100%;
+  object-fit: fill;
+}
