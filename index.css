@@ -169,8 +169,11 @@ nav a {
 }
 
 .resume-photo {
-  width: 100%;
-  object-fit: fill;
+  width: 1000px;
+  height: 1000px;
+  object-fit: contain;
+  display: block;
+  margin: auto;
 }
 
 footer {
