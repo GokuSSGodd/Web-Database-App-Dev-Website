@@ -14,7 +14,9 @@
 nav{
   background: #0D0D0D;
   padding: 14px;
-  text-align: center ;
+  text-align: center;
+  top: 0; 
+  position: fixed;
 }
 
 nav a {
@@ -22,14 +24,18 @@ nav a {
   font-size: 18px;
   font-weight: var(--heading-font-weight);
   text-decoration: none;
-  padding: 10px 59px; 
+  padding: 10px 56px; 
   border-radius: 5px;
   display: inline-block;
-}
+  }
 
 nav a:hover {
   color: #1E90FF;
   background-color: rgba(30, 144, 255, 0.15);
+}
+
+main, section{
+  padding-top: 35px; 
 }
 
 .heading {
