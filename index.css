@@ -1,35 +1,41 @@
  :root{
-    --paragraph-font-size:28px; 
-    --heading-font-weight: bold;
-    --section-margin: 50px;
-    --section-border: #1E293B 2px solid;
-    --section-background: rgba(255,255,255,0.12);
+  --paragraph-font-size:28px; 
+  --heading-font-weight: bold;
+  --section-margin: 50px;
+  --section-border: #1E293B 2px solid;
+  --section-background: linear-gradient(180deg, #121212, #1A1A1A);
  }
  
  body{
-    background: linear-gradient(90deg, #22C55E, #2563EB);
-    margin: 0;
+  background: #0D0D0D;
+  margin: 0;
 }
 
 nav{
-    background: #1E293B;
-    padding: 14px;
-    text-align: center ;
+  background: #0D0D0D;
+  padding: 14px;
+  text-align: center ;
 }
 
 nav a {
-    color:#E2E8F0;
-    font-size: 18px;
-    font-weight: var(--heading-font-weight);
-    text-decoration: none;
-    padding: 10px 59px; 
-    border-radius: 5px;
-    display: inline-block;
+  color: #FFFFFF;
+  font-size: 18px;
+  font-weight: var(--heading-font-weight);
+  text-decoration: none;
+  padding: 10px 59px; 
+  border-radius: 5px;
+  display: inline-block;
+}
+
+nav a:hover {
+  color: #1E90FF;
+  background-color: rgba(30, 144, 255, 0.15);
 }
 
 .heading {
-    text-align: center;
-    font-size: 40px;;
+  text-align: center;
+  font-size: 40px;
+  color: #FFFFFF;
 }
 
 .about-me-section {
@@ -53,6 +59,7 @@ nav a {
   margin-left: 350px;
   margin-right: 75px;
   text-align: justify;
+  color: #FFFFFF;
 }
 
 .education-section {
@@ -66,11 +73,12 @@ nav a {
   text-align: center;
   font-size: var(--paragraph-font-size);
   margin: 5px 0;
+  color: #FFFFFF;
 }
 
 .experience-section, .projects-section {
   margin: var(--section-margin);
-  border:var(--section-border);
+  border: var(--section-border);
   background: var(--section-background);
   border-radius: 125px;
 }
@@ -88,15 +96,28 @@ nav a {
 .experience-position-name, .project-name {
   font-weight: var(--heading-font-weight);
   font-size: 32px;
+  color: #FFFFFF;
 }
 
-.experience-company, .project-location {
+.experience-company {
   font-weight: var(--heading-font-weight);
   font-size: 30px;
+  color: #FFFFFF;
 }
 
 .experience-location {
   font-weight: var(--heading-font-weight);
+  color :#B0B0B0;
+}
+
+.experience-tasks, .project-description{
+  color: #FFFFFF;
+}
+
+.project-location {
+  font-weight: var(--heading-font-weight);
+  font-size: 30px;
+  color: #B0B0B0;
 }
 
 .certifications-section{
@@ -122,6 +143,7 @@ nav a {
   font-size: 20px;
   width: 400px;
   text-align: center;
+  color: #FFFFFF;
 }
 
 .testimonials-section {
@@ -142,6 +164,7 @@ nav a {
   margin-left: 750px;
   margin-right: 25px;
   text-align: justify;
+  color: #FFFFFF;
 }
 
 .testimonial-item {
@@ -153,6 +176,7 @@ nav a {
   margin-left: 1000px;
   font-size: var(--paragraph-font-size);
   width: 425px;
+  color: #B0B0B0;
 }
 
 .resume-section {
@@ -161,11 +185,16 @@ nav a {
 }
 
 .resume-button {
-  background-color: lightgray;
+  background-color: #d3d3d3;
   padding: 10px;
   font-size: 23px;
   margin-bottom: 50px;
   border-radius: 10px;
+}
+
+.resume-button:hover {
+  background-color: #00FF85;
+  cursor: pointer;
 }
 
 .resume-photo {
@@ -177,7 +206,7 @@ nav a {
 }
 
 footer {
-  background: #1E293B;
+  background: #0D0D0D;
   padding: 14px;
   text-align: center;
 }
@@ -187,4 +216,8 @@ footer {
   height: 50px;
   padding: 10px 50px;
   object-fit: contain;
+}
+
+.social-icon:hover {              
+  transform: scale(1.25); 
 }
