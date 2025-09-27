@@ -7,16 +7,39 @@
  }
  
  body{
+  display: grid;
+  grid-template-columns: 1fr; 
+  grid-template-rows: auto auto auto auto auto auto auto auto auto;
+  grid-template-areas:
+    "header"
+    "About"
+    "Education"
+    "Experience"
+    "Projects"
+    "Certifications"
+    "Testimonials"
+    "Resume"
+    "footer";
   background: #0D0D0D;
-  margin: 0;
+  min-height: 100vh;
+  max-width: 100vw;
+}
+
+header {
+  grid-area: header;
+  background: #0D0D0D;
+}
+
+main{
+  display: contents;
 }
 
 nav{
+  justify-content: center;
   background: #0D0D0D;
-  padding: 14px;
-  text-align: center;
-  top: 0; 
-  position: fixed;
+  border: 2px white;
+  display: flex;
+  gap: 125px;
 }
 
 nav a {
@@ -24,19 +47,14 @@ nav a {
   font-size: 18px;
   font-weight: var(--heading-font-weight);
   text-decoration: none;
-  padding: 10px 56px; 
   border-radius: 5px;
-  display: inline-block;
-  }
+}
 
 nav a:hover {
   color: #1E90FF;
   background-color: rgba(30, 144, 255, 0.15);
 }
 
-main, section{
-  padding-top: 35px; 
-}
 
 .heading {
   text-align: center;
@@ -44,28 +62,34 @@ main, section{
   color: #FFFFFF;
 }
 
+.About {
+  grid-area: About;
+}
+
 .about-me-section {
+  display: flex;
   margin: var(--section-margin);
   border:var(--section-border);
   background: var(--section-background);
-}
+} 
 
 .photo {
-  float: left;
-  width: 200px;
-  height: 210px;
+  width: 300px; 
+  height: 300px; 
   object-fit: cover;
   border-radius: 50%;
-  margin-left: 75px;
-  margin-top: 55px;
+  margin: 75px;
 }
 
 .about-me  {
   font-size: var(--paragraph-font-size);  
-  margin-left: 350px;
-  margin-right: 75px;
   text-align: justify;
   color: #FFFFFF;
+  margin: 75px;
+}
+
+.Education {
+  grid-area: Education;
 }
 
 .education-section {
@@ -82,6 +106,14 @@ main, section{
   color: #FFFFFF;
 }
 
+.Experience {
+  grid-area: Experience;
+}
+
+.Projects{
+  grid-area: Projects;
+}
+
 .experience-section, .projects-section {
   margin: var(--section-margin);
   border: var(--section-border);
@@ -90,9 +122,7 @@ main, section{
 }
 
 .experience, .project {
-  margin: 20px 50px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  box-sizing: border-box;
 }
 
 .experience p, .experience-tasks, .project-description {
@@ -126,30 +156,38 @@ main, section{
   color: #B0B0B0;
 }
 
+.Certifications {
+  grid-area: Certifications;
+}
+
 .certifications-section{
-  padding-left: 200px; 
-  padding-right: 200px; 
+  box-sizing: border-box;
 }
 
 .certification-item{
-  padding-left: 13px; 
-  padding-right: 13px; 
-  display: inline-table;
+  /* padding-left: 13px; */
+  /* padding-right: 13px; */
+  /* display: inline-table; */
+  box-sizing: border-box;
 }
 
 .certification-photo {
   width: 400px;
-  height: 300px;
+  height: 300px; 
   object-fit:fill;
   vertical-align: middle;
-  margin-bottom: 10px;;
+  margin-bottom: 10px; 
 }
 
 .certification-name{
   font-size: 20px;
-  width: 400px;
+  /* width: 400px; */
   text-align: center;
   color: #FFFFFF;
+}
+
+.Testimonials {
+  grid-area: Testimonials;
 }
 
 .testimonials-section {
@@ -157,32 +195,36 @@ main, section{
 }
 
 .testimonial-photo {
-  float: left;
-  width: 700px;
-  height: 300px;
-  margin-top: 27px;
+  /* float: left; */
+  /* width: 700px; */
+  /* height: 300px; */
   object-fit: fill;
-  margin-left: 25px;
+  /* margin-top: 27px; */
+  /* margin-left: 25px; */
 }
 
 .testimonial-quote {
   font-size: var(--paragraph-font-size);  
-  margin-left: 750px;
-  margin-right: 25px;
+  /* margin-left: 750px; */
+  /* margin-right: 25px; */
   text-align: justify;
   color: #FFFFFF;
 }
 
 .testimonial-item {
-  display: inline-block;
-  width: 100%;
+  /* display: inline-block; */
+  /* width: 100%; */
+  box-sizing: border-box;
 }
 
 .testimonial-author {
-  margin-left: 1000px;
   font-size: var(--paragraph-font-size);
-  width: 425px;
+  /* width: 425px; */
   color: #B0B0B0;
+}
+
+.Resume {
+  grid-area: Resume;
 }
 
 .resume-section {
@@ -194,7 +236,7 @@ main, section{
   background-color: #d3d3d3;
   padding: 10px;
   font-size: 23px;
-  margin-bottom: 50px;
+  /* margin-bottom: 50px; */
   border-radius: 10px;
 }
 
@@ -204,23 +246,24 @@ main, section{
 }
 
 .resume-photo {
-  width: 1000px;
-  height: 1000px;
+  /* width: 1000px; */
+  /* height: 1000px; */
   object-fit: contain;
   display: block;
-  margin: auto;
+  /* margin: auto; */
 }
 
 footer {
+  grid-area: footer;
   background: #0D0D0D;
-  padding: 14px;
+  /* padding: 14px; */
   text-align: center;
 }
 
 .social-icon {
   width: 50px;
   height: 50px;
-  padding: 10px 50px;
+  /* padding: 10px 50px; */
   object-fit: contain;
 }
 
