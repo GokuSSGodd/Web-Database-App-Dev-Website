@@ -68,24 +68,26 @@ nav a:hover {
 
 .about-me-section {
   display: flex;
+  align-items: center;      /* vertically align photo and text */
+  gap: 40px; 
   margin: var(--section-margin);
   border:var(--section-border);
   background: var(--section-background);
+  padding: 30px;
 } 
 
+
 .photo {
-  width: 300px; 
-  height: 300px; 
+  width: 300px;
+  height: 300px;
   object-fit: cover;
   border-radius: 50%;
-  margin: 75px;
 }
 
 .about-me  {
-  font-size: var(--paragraph-font-size);  
+  font-size: var(--paragraph-font-size);
   text-align: justify;
   color: #FFFFFF;
-  margin: 75px;
 }
 
 .Education {
