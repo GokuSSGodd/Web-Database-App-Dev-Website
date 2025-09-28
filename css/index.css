@@ -68,7 +68,7 @@ nav a:hover {
 
 .about-me-section {
   display: flex;
-  align-items: center;      /* vertically align photo and text */
+  align-items: center;
   gap: 40px; 
   margin: var(--section-margin);
   border:var(--section-border);
