@@ -307,12 +307,18 @@ footer {
   }
 
 #About {
-  margin-top: 250px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto;
+  grid-template-areas: 
+    "Photo"
+    "AboutMe"
+    "about-me";
+  justify-items: center; /* keeps things centered */
 }
 
 .about-me-section {
-  display: grid;
-  grid-template-columns: .5fr 1fr;
+  display: contents;
   align-items: center;
   vertical-align: middle;
   gap: 20px; 
@@ -320,21 +326,18 @@ footer {
   border:var(--section-border);
   background: var(--section-background);
   padding: 30px;
-  height: 20%;
 } 
 
 .photo {
-  position: absolute;
-  inset-inline-start: 38.7vw;
-  inset-block-start: 50px;
+  grid-area: Photo;
   width: 200px;
   height: 200px;
   object-fit: cover;
   border-radius: 50%;
 }
 
-.about-me  {
-  position: absolute;
+.about-me {
+  grid-area: about-me;
   font-size: var(--paragraph-font-size);
   text-align: justify;
   color: #FFFFFF;
