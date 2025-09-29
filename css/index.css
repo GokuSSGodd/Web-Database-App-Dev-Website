@@ -1,5 +1,10 @@
  :root{
   --paragraph-font-size:28px; 
+  --heading-font-size: 40px;
+  --subheading-font-size: 30px;
+  --name-font-size: 32px;
+  --certification-name-font-size: 20px;
+  --button-font-size: 24px;
   --heading-font-weight: bold;
   --section-margin: 50px;
   --section-border: #1E293B 2px solid;
@@ -7,22 +12,7 @@
  }
  
  body{
-  display: grid;
-  grid-template-columns: 1fr; 
-  grid-template-rows: auto auto auto auto auto auto auto auto auto;
-  grid-template-areas:
-    "header"
-    "About"
-    "Education"
-    "Experience"
-    "Projects"
-    "Certifications"
-    "Testimonials"
-    "Resume"
-    "footer";
   background: #0D0D0D;
-  min-height: 100vh;
-  max-width: 100vw;
 }
 
 header {
@@ -30,16 +20,13 @@ header {
   background: #0D0D0D;
 }
 
-main{
-  display: contents;
-}
-
 nav{
-  justify-content: center;
+  justify-content: space-between;
   background: #0D0D0D;
   border: 2px white;
   display: flex;
-  gap: 125px;
+  width: 100%;
+  gap: 20px;
 }
 
 nav a {
@@ -55,27 +42,28 @@ nav a:hover {
   background-color: rgba(30, 144, 255, 0.15);
 }
 
-
 .heading {
   text-align: center;
-  font-size: 40px;
+  font-size: var(--heading-font-size);
   color: #FFFFFF;
 }
 
-.About {
-  grid-area: About;
-}
-
 .about-me-section {
-  display: flex;
+  display: grid;
+  grid-template-columns: .5fr 1fr;
   align-items: center;
-  gap: 40px; 
+  vertical-align: middle;
+  gap: 20px; 
   margin: var(--section-margin);
   border:var(--section-border);
   background: var(--section-background);
   padding: 30px;
 } 
 
+.photo-section {
+  display: flex;
+  justify-content: center;
+}
 
 .photo {
   width: 300px;
@@ -88,10 +76,6 @@ nav a:hover {
   font-size: var(--paragraph-font-size);
   text-align: justify;
   color: #FFFFFF;
-}
-
-.Education {
-  grid-area: Education;
 }
 
 .education-section {
@@ -108,14 +92,6 @@ nav a:hover {
   font-size: var(--paragraph-font-size);
   margin: 5px 0;
   color: #FFFFFF;
-}
-
-.Experience {
-  grid-area: Experience;
-}
-
-.Projects{
-  grid-area: Projects;
 }
 
 .experience-section, .projects-section {
@@ -138,13 +114,13 @@ nav a:hover {
 
 .experience-position-name, .project-name {
   font-weight: var(--heading-font-weight);
-  font-size: 32px;
+  font-size: var(--name-font-size);
   color: #FFFFFF;
 }
 
 .experience-company {
   font-weight: var(--heading-font-weight);
-  font-size: 30px;
+  font-size: var(--subheading-font-size);
   color: #FFFFFF;
 }
 
@@ -159,34 +135,36 @@ nav a:hover {
 
 .project-location {
   font-weight: var(--heading-font-weight);
-  font-size: 30px;
+  font-size: var(--subheading-font-size);
   color: #B0B0B0;
 }
 
 .Certifications {
-  grid-area: Certifications;
+  margin: var(--section-margin);
 }
 
 .certifications-section{
   display: grid;
   grid-template-columns: .1fr .1fr .1fr;
-  gap: 200px;
-  margin: var(--section-margin);
+  grid-template-rows: auto auto auto;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.certification-item{
+  width: 28vw;
+  height: auto;
 }
 
 .certification-photo {
-  width: 400px;
+  width: inherit;
   height: 300px; 
 }
 
 .certification-name{
-  font-size: 20px;
+  font-size: var(--certification-name-font-size);
   text-align: center;
   color: #FFFFFF;
-}
-
-.Testimonials {
-  grid-area: Testimonials;
 }
 
 .testimonials-section {
@@ -194,42 +172,35 @@ nav a:hover {
 }
 
 .testimonial-photo {
-  width: 700px; 
-  height: 300px; 
-  object-fit: fill;
-  grid-row: 1 / 3;
-  grid-column: 1 / 2;
+  width: 100%;
+  height: 85%;  
+  display: block;
 }
 
 .testimonial-quote {
-  font-size: var(--paragraph-font-size);  
+  font-size: 2vw;  
   text-align: justify;
   color: #FFFFFF;
   margin: 0; 
   padding: 0; 
-}
+} 
 
 .testimonial-item {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr .5fr;
+  padding: 20px;
+  gap: 25px;
 }
 
 .testimonial-author {
-  font-size: var(--paragraph-font-size);
+  font-size: 2vw;
   color: #B0B0B0;
   text-align: center;
-  max-width: 410px;
-  margin: 10px 150px 0 200px;
-}
-
-.Resume {
-  grid-area: Resume;
+  width: 100%;
 }
 
 .resume-section {
   margin: var(--section-margin);
-  border: var(--section-border);
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
@@ -240,8 +211,7 @@ nav a:hover {
 .resume-button {
   background-color: #d3d3d3;
   padding: 10px;
-  font-size: 23px;
-  /* margin-bottom: 50px; */
+  font-size: var(--button-font-size);
   border-radius: 10px;
 }
 
@@ -251,24 +221,196 @@ nav a:hover {
 }
 
 .resume-photo {
- object-fit: cover;
- margin: auto; 
+  width: 100%;
+  height: auto;
 }
 
 footer {
-  grid-area: footer;
   background: #0D0D0D;
-  /* padding: 14px; */
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20% 25px;
 }
 
 .social-icon {
   width: 50px;
   height: 50px;
-  /* padding: 10px 50px; */
   object-fit: contain;
 }
 
 .social-icon:hover {              
   transform: scale(1.25); 
+}
+
+@media screen and (max-width: 1100px) {
+  :root{
+    --paragraph-font-size:22px; 
+    --heading-font-size: 28px;
+    --subheading-font-size: 24px;
+    --name-font-size: 26px;
+    --certification-name-font-size: 18px;
+    --button-font-size: 20px;
+  }
+
+  nav a {
+    font-size: 18px;
+  }
+
+  .certification-name{
+    font-size: 20px;
+    text-align: center;
+    color: #FFFFFF;
+  }
+
+  .photo {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  :root{
+    --paragraph-font-size:18px; 
+    --heading-font-size: 24px;
+    --subheading-font-size: 20px;
+    --name-font-size: 22px;
+    --certification-name-font-size: 16px;
+    --button-font-size: 18px;
+  }
+
+  nav a {
+    font-size: 16px;
+  }
+
+  .photo {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  :root{
+    --paragraph-font-size:16px; 
+    --heading-font-size: 20px;
+    --subheading-font-size: 18px;
+    --name-font-size: 20px;
+    --certification-name-font-size: 14px;
+    --button-font-size: 16px;
+  }
+
+  nav a {
+    font-size: 14px;
+  }
+
+#About {
+  margin-top: 250px;
+}
+
+.about-me-section {
+  display: grid;
+  grid-template-columns: .5fr 1fr;
+  align-items: center;
+  vertical-align: middle;
+  gap: 20px; 
+  margin: var(--section-margin);
+  border:var(--section-border);
+  background: var(--section-background);
+  padding: 30px;
+  height: 20%;
+} 
+
+.photo {
+  position: absolute;
+  inset-inline-start: 38.7vw;
+  inset-block-start: 50px;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.about-me  {
+  position: absolute;
+  font-size: var(--paragraph-font-size);
+  text-align: justify;
+  color: #FFFFFF;
+}
+
+.certifications-section{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.certification-item{
+  width: 100%;
+  height: auto;
+}
+
+.certification-photo {
+  width: inherit;
+  height: 300px; 
+}
+
+.certification-name{
+  font-size: var(--certification-name-font-size);
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.testimonial-photo {
+  width: 100%;
+  height: 85%;  
+}
+
+.testimonial-quote {
+  font-size: 2vw;  
+  text-align: justify;
+  color: #FFFFFF;
+} 
+
+.testimonial-item {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.testimonial-author {
+  font-size: 2vw;
+  color: #B0B0B0;
+  text-align: center;
+  width: 100%;
+}
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width: 750px) {
+  :root{
+    --paragraph-font-size:14px; 
+    --heading-font-size: 18px;
+    --subheading-font-size: 16px;
+    --name-font-size: 18px;
+    --certification-name-font-size: 12px;
+    --button-font-size: 14px;
+  }
+
+  nav a {
+    font-size: 12px;
+  }
+
+  .photo {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
 }
