@@ -26,15 +26,13 @@ header {
 
 nav{
   justify-content: space-between;
-  background: #0D0D0D;
-  border: 2px white;
   display: flex;
   width: 100%;
   gap: 20px;
 }
 
 nav a {
-  color: #FFFFFF;
+  color: #1E90FF;
   font-size: 18px;
   font-weight: var(--heading-font-weight);
   text-decoration: none;
@@ -42,14 +40,14 @@ nav a {
 }
 
 nav a:hover {
-  color: #1E90FF;
+  color: #00FF85;
   background-color: rgba(30, 144, 255, 0.15);
 }
 
 .heading {
   text-align: center;
   font-size: var(--heading-font-size);
-  color: #FFFFFF;
+  color: #1E90FF;
 }
 
 .about-me-section {
@@ -216,6 +214,7 @@ nav a:hover {
 
 .resume-button {
   background-color: #d3d3d3;
+  border: #1E90FF 2px solid;
   padding: 10px;
   font-size: var(--button-font-size);
   border-radius: 10px;
